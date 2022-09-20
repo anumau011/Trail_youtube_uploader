@@ -10,14 +10,10 @@ import glob, mimetypes
 
 import google.oauth2.credentials
 import google_auth_oauthlib.flow
-from googleapiclient.discovery 
-import build
-from googleapiclient.errors 
-import HttpError
-from googleapiclient.http 
-import MediaFileUpload
-from google_auth_oauthlib.flow 
-import InstalledAppFlow
+from googleapiclient.discovery import build
+from googleapiclient.errors import HttpError
+from googleapiclient.http import MediaFileUpload
+from google_auth_oauthlib.flow import InstalledAppFlow
 
 
 httplib2.RETRIES = 1
