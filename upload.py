@@ -10,10 +10,14 @@ import glob, mimetypes
 
 import google.oauth2.credentials
 import google_auth_oauthlib.flow
-from googleapiclient.discovery import build
-from googleapiclient.errors import HttpError
-from googleapiclient.http import MediaFileUpload
-from google_auth_oauthlib.flow import InstalledAppFlow
+from googleapiclient.discovery 
+import build
+from googleapiclient.errors 
+import HttpError
+from googleapiclient.http 
+import MediaFileUpload
+from google_auth_oauthlib.flow 
+import InstalledAppFlow
 
 
 httplib2.RETRIES = 1
@@ -28,7 +32,7 @@ RETRIABLE_EXCEPTIONS = (httplib2.HttpLib2Error, IOError, httplib.NotConnected,
 
 RETRIABLE_STATUS_CODES = [500, 502, 503, 504]
 
-CLIENT_SECRETS_FILE = input(">Enter your client credential secret file path:\n")
+CLIENT_SECRETS_FILE = raw_input('Enter your client credential secret file path:\n')
 
 SCOPES = ['https://www.googleapis.com/auth/youtube.upload']
 API_SERVICE_NAME = 'youtube'
@@ -38,6 +42,9 @@ VALID_PRIVACY_STATUSES = ('public', 'private', 'unlisted')
 
 
 # Authorize the request and store authorization credentials.
+
+# Making Function On Here.......
+
 def get_authenticated_service():
   flow = InstalledAppFlow.from_client_secrets_file(CLIENT_SECRETS_FILE, SCOPES)
   credentials = flow.run_console()
